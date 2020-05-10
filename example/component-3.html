@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>component-3</title>
+        <script type="text/javascript" src="../assets/js/vue.js"></script>
+    </head>
+    <body>
+        <h1>component-3</h1>
+        <hr>
+        <div id="app">
+            
+            <cc></cc>
+        </div>
+
+        <script type="text/javascript">
+            var city={
+                template:`
+                <div style="color:green;">cc yiding shuaige!</div>
+                `
+            }
+            var cccomponent={
+                template:`
+                <div>
+                <p>cc shi shuaige!</p>
+                <city></city>
+                </div>
+                `,
+                components:{
+                    "city":city
+                }
+            }
+
+
+            var app = new Vue({
+                el:'#app',
+                components:{
+                   "cc":cccomponent
+                }
+                
+            })
+        </script>
+    </body>
+</html>
